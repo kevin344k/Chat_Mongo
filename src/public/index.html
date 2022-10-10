@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat JavaScript FullStack</title>
+    <!-- BOOTSTRAP -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!--  icons Bootstrap -->
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- CUSTOM CSS -->
+ 
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-warning">
+      <a href="/" class="navbar-brand mx-auto">JavaScript FullStack Chat</a>
+    </nav>
+
+    <div class="card col-md-4 mt-5 mx-auto" id="nickWrap">
+      <div class="card-header">
+        <h3>Enter your Username:</h3>
+      </div>
+      <p id="nickError"></p>
+      <div class="card-body">
+        <form id="nickForm">
+          <input type="text" id="nickname" class="form-control">
+          <button type="submit" class="btn btn-warning mt-2">
+            <i class="bi bi-send-fill mr-2"></i>Send</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="contentWrap" class="container">
+      <div class="row mt-4 ">
+        <div class="col-md-6 mx-auto mr-0">
+          <div class="card">
+            <div class="card-header">
+              <h4>Let's Chat</h4><div id="userTitle" class="text-info "></div>
+            </div>
+            <div id="chat" class="card-body"></div>
+  
+            <form id="message-form" class="card-footer">
+              <div class="input-group">
+                <input class="form-control" type="text" id="message" />
+                <div class="input-group-append ml-2">
+                 <button type="submit" class="btn btn-warning">
+                  <i class="bi bi-send-fill mr-2"></i>Enviar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        
+        </div>
+  
+  
+  
+     <div class="col-md-3 ">
+      <div class="card">
+        <div class="card-header">
+          <h3>Users</h3>
+        </div>
+        <div class="card-body">
+            <div id="usernames" >
+
+            </div>
+        </div>
+      </div>
+     </div>
+  
+  
+      </div>
+   
+    
+    </div>
+
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./socket.io/socket.io.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
