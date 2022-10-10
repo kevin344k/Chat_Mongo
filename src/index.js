@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, "public")));
 //conexión a la base de datos
 
 mongoose
-  .connect("mongodb://localhost/chat-database")
+  .connect('mongodb+srv://kevin344k:kevin344k@cluster0.gaw6qqs.mongodb.net/?retryWrites=true&w=majority')
   .then((db) => console.log("db is connected"))
   .catch((err) => console.log(err));
 
